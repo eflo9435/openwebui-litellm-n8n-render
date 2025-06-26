@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: unified-service
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: PORT
+        value: 3000
+    healthCheckPath: /
