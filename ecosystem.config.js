@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "openwebui",
       cwd: "./openwebui",
-      script: "app.py",
+      script: "backend/main.py",
       interpreter: "python3",
       env: {
         PORT: 3000
@@ -12,9 +12,9 @@ module.exports = {
     {
       name: "litellm",
       cwd: "./litellm",
-      script: "litellm_proxy:app",
-      interpreter: "uvicorn",
-      args: "--host 0.0.0.0 --port 4000"
+      script: "uvicorn",
+      interpreter: "none",
+      args: "litellm.main:app --host 0.0.0.0 --port 4000"
     },
     {
       name: "n8n",
